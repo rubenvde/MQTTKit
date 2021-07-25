@@ -21,8 +21,8 @@ public struct MQTTOptions {
     }
     var cleanSession = true
     var will: MQTTMessage?
-    var password: String? = nil
-    var username: String? = nil
+    public var password: String? = nil
+    public var username: String? = nil
     var keepAliveInterval: UInt16 = 10
     var clientId: String = UUID().uuidString
     var useTLS = false
@@ -31,7 +31,7 @@ public struct MQTTOptions {
     var bufferSize: Int = 4096
     var readQosClass: DispatchQoS.QoSClass = .background
     
-    init(host: String, port: Int? = nil) {
+    public init(host: String, port: Int? = nil) {
         self.host = host
     }
 }
